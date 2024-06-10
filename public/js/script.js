@@ -1,11 +1,77 @@
+const myButton = document.getElementById('btn');
+myButton.onclick = function() {
+    const name = prompt('Enter your full name');
+    document.getElementById('name').innerText = name;
+}
+
+// Variebles
+const pi = 3.142;
+let name = 'Maame Yankeh';
+let age = 967;
+let present = false;
+console.log(name);
+
+// Object
+const car = {
+    numberPlate: 'GR-345-24',
+    model: 'Bentley',
+    color: 'purple',
+    weight: 50,
+    weightUnit: 'KG',
+    owner: {
+        name: 'Maame',
+        driver: {
+            name: 'Fiifi',
+        }
+        
+    }
+}
+console.log(car.numberPlate);
+console.log(car.owner.driver.name);
+console.log(car);
+
+console.log(car.numberPlate);
+car.owner.driver.name = 'Mike';
+console.log(car.owner.driver.name);
 
 
+// Arrays
+const tweet1 = {
+    text: 'I am learning js today.',
+    likes: 5,
+    shares: 2,
+    retweet: 1,
+  }
+  const tweet2 = {
+    text: 'I am learning arrays today.',
+    likes: 8,
+    shares: 3,
+    retweet: 0,
+  }
+  const tweets = [];
+  tweets.push(tweet1);
+  tweets.push(tweet2);
+  tweets.length;
+  tweets[1];
+  
+  // Dates
+  const today = new Date();
+  today.toString();
+  today.toLocaleDateString();
+  today.getHours();
+  
+  // If/Else
+  if (today.getHours() >= 16) {
+    console.log('class has ended!')
+  } else {
+    console.log('class is in session')
+  }
+  
   // For Loop
   for (let i = 0; i <=9; i+=1) {
     console.log('Notify friends!', i);
   }
     
-
   // Functions
 // Defining functions
 function login(username, password) {
@@ -49,3 +115,61 @@ Math.max(78, 12, 98, 14, 89);
 // Handling user input
 // correct
 1200 + Number('250');
+
+// wrong
+1200 + '250';
+1200 + Number('delete');
+
+
+// Sring concatenation
+const firstname = 'Maame Yankeh';
+const lastname = 'Cornelius';
+firstname + ' ' + lastname;
+
+// Template Litral   get used to this snytax
+`${firstname.trim()} ${lastname.trim()}`;
+
+// Sting method
+firstname.length;
+lastname.length;
+`${firstname.trim()} ${lastname.trim()}`.length;
+firstname.toUpperCase();
+lastname.charAt(0);
+`${firstname.trim().charAt(0)}${lastname.trim().charAt(0)}`;
+
+// Sring Conversion
+String(2024);
+
+// write a function that will add a participant to our Google Classroom
+
+// right key word, semantic name
+const participants = [];
+function addParticipant(email){
+  // check if email was provided
+  if (email === null || email === undefined) {
+    return 'Email not provided!'
+  }
+  // OR
+  if (!email) {
+    return 'Email not provided!'
+  }
+  // check if email is valid
+  if (!email.includes('@')) {
+    return 'Invalid email provided!';
+  }
+  // add email to the participants;
+  participants.push(email);
+  // notify them via mail
+  // return response
+  return 'Participant added!';
+}
+
+addParticipant('c.maameyankeh@gmail.com');
+
+// Arrays in JavaScripts
+const alphabets = ['A', 'B', 'C',  , 'D'];
+alphabets;
+alphabets.join(' ');
+alphabets.join(' ').split(' ');
+
+
