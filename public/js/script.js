@@ -172,4 +172,62 @@ alphabets;
 alphabets.join(' ');
 alphabets.join(' ').split(' ');
 
+// write a function that will take firstname, lastname and return fullname
+
+function fullName(firstname, lastname) {
+  return `${firstname} ${lastname}`;
+}
+
+fullName('Maame Yankeh', 'Cornelius')
+
+// OR
+
+
+
+
+// OR (THE IDAEL) defining OBJECT
+
+  const user = {
+    // key:'value'
+    firstname: 'Maame Yankeh',
+    lastname: 'Cornelius',
+  }
+  function fullName(user) {
+    return {
+      ...user,
+      fullname: `${user.firstname} ${user.lastname}`
+    }
+  }
+
+fullName(user);
+
+// Array Map
+// used for transformation
+
+const users = [
+  {firstname: 'Linda', lastname: 'Parker'},
+  {firstname: 'Mark', lastname: 'Twaine'},
+  {firstname: 'Oliver', lastname: 'Queen'},
+  {firstname: 'Stephen', lastname: 'Grider'},
+  {firstname: 'Elon', lastname: 'Musk'},
+]
+
+users.map(fullName);
+
+
+// Map and return squares of numbers
+function square(number) {
+  return number ** 2;
+}
+const numbers = [0,1,2,3,4,5];
+numbers.map(square)
+
+
+// Filter and return even numbers
+function even(number) {
+  return number % 2 === 0;
+}
+
+numbers.filter(even);
+
 
