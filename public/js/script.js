@@ -231,3 +231,54 @@ function even(number) {
 numbers.filter(even);
 
 
+// OBJECT IN JAVASCRIPT
+
+// write a function that takes a user with name and dateOfBirth and returns true if their birthday is today else false
+
+// DataBase
+// const user = {
+//   name: 'Martin King',
+//   // dateOfBirth: '1887-06-12'
+//   dateOfBirth: '1997-06-12'
+// };
+
+function isBirthdayToday(user) {
+  const today = new Date();
+  const birthDate = new Date(user.dateOfBirth);
+  // debugging
+  console.log(birthDate.getMonth(), today.getMonth());
+  console.log(birthDate.getDate(), today.getDate());
+  if (today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate()) {
+     return true;
+  } else {
+  return false;
+  }
+} 
+isBirthdayToday(user);
+
+// write a function that takes a user with name and dateOfBirth and returns happy birthday if their birthday is today else returns not your day
+
+function birthdayMessage (user) {
+  const today = new Date();
+  const birthDate = new Date(user.dateOfBirth);
+   if (today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate()) {
+     return 'Happy Birthday, Martin King';
+} else {
+  return 'Not your day';
+  }
+} 
+ birthdayMessage(user);
+
+// OR
+function birthdayGreeting (user) {
+  if (isBirthdayToday(user)) {
+    return `Happy Birthday, Martin`
+  } else {
+    return `Not Yet!`
+  }
+}
+
+birthdayGreeting(user)
+
+
+
